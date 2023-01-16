@@ -73,5 +73,5 @@ def main():
 
 
 if __name__ == "__main__":
-    # Start from here
+    # Start from here - This is the main program
     main()
