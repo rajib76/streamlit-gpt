@@ -1,5 +1,5 @@
 #########
 openai
 streamlit==1.12.0
-gTTS==2.2.2
-googletrans==3.0.0
+gTTS
+googletrans==3.1.0a0
