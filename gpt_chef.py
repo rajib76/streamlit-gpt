@@ -18,4 +18,15 @@ if key>"":
         )
 
         res_recipe = response["choices"][0]["text"]
+        img_prompt = "A beautiful image of "+food_answer
+        response = openai.Image.create(
+            prompt=img_prompt,
+            n=1,
+            size="256x256"
+        )
+
+        image_url = response['data'][0]['url']
         st.info(res_recipe)
+        st.image(
+            image_url,width=600,  # Manually Adjust the width of the image as per requirement
+        )
