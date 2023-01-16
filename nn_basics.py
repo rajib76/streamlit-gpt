@@ -58,6 +58,7 @@ def main():
                 )
                 res = response["choices"][0]["text"]
                 answer_text = st.info(res)
+                # For some reason text to speech worked locally but not on streamlit cloud
                 result, output_text = text_to_speech("en", "en", res, "com")
                 audio_file = open(f"temp/{result}.mp3", "rb")
                 audio_bytes = audio_file.read()
